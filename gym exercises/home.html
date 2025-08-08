@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate Gym & Fitness</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="workout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Style Header */
+      header {
+        display: flex;
+        position: sticky;
+        top: 0; /* Ensure it sticks to the top */
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background: #222;
+        color: rgb(255, 255, 255);
+        z-index: 1000; /* Keeps navbar above other elements */
+      }
+
+      /* Logo */
+      .logo {
+        font-size: 22px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      /* Desktop Navbar */
+      .navbar {
+        display: flex;
+        list-style: none;
+      }
+
+      .navbar li {
+        margin: 0 15px;
+      }
+
+      .navbar li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .navbar li a:hover {
+        color: #00aaff;
+        border-bottom: 2px solid #00aaff;
+      }
+
+      /* Mobile Menu Icon */
+      .nav-box-menu {
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+      }
+
+      /* Responsive Navbar */
+      @media (max-width: 768px) {
+        .nav-box-menu {
+          display: block;
+        }
+
+        .navbar {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background: #333;
+          text-align: center;
+          transition: 0.3s ease-in-out;
+        }
+
+        .navbar li {
+          padding: 10px;
+          border-bottom: 1px solid #444;
+        }
+
+        .navbar li a {
+          display: block;
+        }
+
+        .navbar.show {
+          display: flex;
+        }
+      }
+      /* 
+      @keyframes slideDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      } */
+
+      /* .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #00aaff;
+        text-decoration: none;
+      } */
+
+      /* .navbar {
+        display: flex;
+        gap: 20px;
+      }
+
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        position: relative;
+      }
+
+      .navbar a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        left: 0;
+        bottom: -3px;
+        background: #00aaff;
+        transition: width 0.3s;
+      }
+
+      .navbar a:hover::after {
+        width: 100%;
+      } */
+
+      .hero {
+        background: url("home1.jpg") no-repeat center center/cover;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+        position: relative;
+        color: rgb(255, 255, 255);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 103%;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-content {
+        z-index: 1;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 15px;
+      }
+
+      .hero p {
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        background: #00aaff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #0077cc;
+      }
+
+      .section {
+        padding: 60px 20px;
+        text-align: center;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .section h2 {
+        font-size: 36px;
+        color: #059;
+        margin-bottom: 20px;
+      }
+
+      .section p {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .feature {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        width: 270px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      .feature:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .feature i {
+        font-size: 32px;
+        color: #00aaff;
+        margin-bottom: 10px;
+      }
+
+      footer {
+        background: #111;
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .footer-social a {
+        margin: 0 10px;
+        color: white;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+
+      .footer-social a:hover {
+        color: #00aaff;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 32px;
+        }
+        .hero p {
+          font-size: 16px;
+        }
+        .features {
+          flex-direction: column;
+          align-items: center;
+        }
+        .navbar {
+          flex-direction: column;
+          background: #222;
+          position: absolute;
+          top: 70px;
+          right: 0;
+          width: 100%;
+          display: none;
+        }
+        .navbar.show {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="#home" class="logo">Gym</a>
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <ul class="navbar" id="nav-menu">
+        <li><a href="/index.html" style="color: #00aaff">Home</a></li>
+        <li>
+          <a href="/workout/workout.html">Workouts</a>
+        </li>
+        <li><a href="/exercise.html">Exercises</a></li>
+        <li><a href="/fitness/fitness.html">Fitness</a></li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+      </ul>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Transform Your Body & Mind</h1>
+        <p>
+          Join our community to achieve your fitness goals with expert training,
+          customized plans, and unmatched support.
+        </p>
+        <a href="/workout/workout.html" class="btn">Explore Workouts</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Our Gym</h2>
+      <p>
+        We are more than just a gym. We are a movement toward strength,
+        discipline, and confidence. Whether you're a beginner or a pro, we have
+        something for you.
+      </p>
+    </section>
+
+    <section id="programs" class="section">
+      <h2>Popular Programs</h2>
+      <div class="features">
+        <div class="feature">
+          <i class="fas fa-dumbbell"></i>
+          <h3>Strength Training</h3>
+          <p>
+            Build muscle and power with guided routines and resistance
+            exercises.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-running"></i>
+          <h3>Cardio & Fat Burn</h3>
+          <p>
+            Improve endurance and burn calories with fun, high-energy workouts.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-female"></i>
+          <h3>Women’s Fitness</h3>
+          <p>
+            Targeted routines for toning, glutes, core, and strength at all
+            levels.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-home"></i>
+          <h3>Home Workouts</h3>
+          <p>
+            No equipment? No problem. Effective workouts you can do anywhere.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Why Choose Us</h2>
+      <div class="features">
+        <div class="feature">
+          <i class="fas fa-users"></i>
+          <h3>Expert Trainers</h3>
+          <p>
+            Certified professionals to guide your journey safely and
+            effectively.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Holistic Wellness</h3>
+          <p>
+            Mind-body approach: we care for your physical and mental fitness.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-clock"></i>
+          <h3>24/7 Access</h3>
+          <p>Train on your schedule, any time of day, any day of the week.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Ultimate Gym. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+
+      //   const menuIcon = document.getElementById("menu-icon");
+      //   const navbar = document.getElementById("navbar");
+
+      //   menuIcon.addEventListener("click", () => {
+      //     navbar.classList.toggle("show");
+      //   });
+    </script>
+  </body>
+</html>

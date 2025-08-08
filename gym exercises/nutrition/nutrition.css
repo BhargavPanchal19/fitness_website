@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  li{
+    list-style: none;
+  }
+  /* Style Header */
+  header {
+    display: flex;
+    position: sticky;
+    top: 0; /* Ensure it sticks to the top */
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #222;
+    color: white;
+    z-index: 1000; /* Keeps navbar above other elements */
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Desktop Navbar */
+  .navbar {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar li a:hover {
+    color: #00aaff;
+    border-bottom: 2px solid #00aaff;
+  }
+  
+  /* Mobile Menu Icon */
+  .nav-box-menu {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .section h2 {
+    color: #059;
+    margin-bottom: 10px;
+  }
+
+  .section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .section ul li {
+    margin-bottom: 8px;
+  }
+
+  .emoji {
+    font-size: 1.3em;
+    margin-right: 5px;
+  }
+
+
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+
+
+
+  body {
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+}
+
+.title{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.title h1{
+  font-size: 30px;
+  color: #059;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+
+.search-bar {
+    margin: 20px;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+}
+
+.category-selector {
+    margin: 20px;
+    text-align: center;
+}
+
+.category-selector select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.category-selector select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+.item {
+    flex: 0 0 auto; /* Prevent items from shrinking or growing */
+    width: 300px; /* Fixed width for each item */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    width: 100%;
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 200px; /* Ensures the image does not exceed the container height */
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    border-radius: 10px 10px 0 0;
+}
+
+.item .info {
+    padding: 15px;
+    text-align: center;
+}
+
+.item .info h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.item .info p {
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .item {
+        max-width: 90%;
+    }
+
+    .search-bar input {
+        width: 90%;
+    }
+}
+
+  @media (max-width: 768px) {
+    .nav-box-menu {
+      display: block;
+    }
+  
+    .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #333;
+      text-align: center;
+      transition: 0.3s ease-in-out;
+    }
+  
+    .navbar li {
+      padding: 10px;
+      border-bottom: 1px solid #444;
+    }
+  
+    .navbar li a {
+      display: block;
+    }
+  
+    .navbar.show {
+      display: flex;
+    }
+  
+
+  }
+  

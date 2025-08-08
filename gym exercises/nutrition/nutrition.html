@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutrition</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="nutrition.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#home1" class="logo">Gym</a>
+
+      <!-- Menu icon -->
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <ul class="navbar" id="nav-menu">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/workout/workout.html">Workouts</a></li>
+        <li><a href="/exercise.html">Exercises</a></li>
+        <li><a href="/fitness/fitness.html">Fitness</a></li>
+        <li><a href="#nutrition" style="color: #00aaff">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+      </ul>
+
+      <!-- <div class="top-btn">
+            <a href="#" class="nav-btn">Login</a>
+          </div> -->
+    </header>
+
+    <!-- <div class="section">
+        <h2>Nutrition Table</h2>
+        <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search for food items...">
+      </div> -->
+
+    <div class="title">
+      <h1>Nutrition</h1>
+      <p style="color: #555555">
+        Good nutrition is a foundation of good health
+      </p>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchBar" placeholder="Search for food..." />
+    </div>
+
+    <div class="category-selector">
+      <label for="category">Select a category:</label>
+      <select id="category" onchange="filterItems()">
+        <option value="all">All</option>
+        <option value="beverages">Beverages</option>
+        <option value="junkfood">Indian snacks</option>
+        <option value="dryfruits">Dry Fruits</option>
+        <option value="vegetables">Vegetables</option>
+        <option value="fruits">Fruits</option>
+        <option value="pizzas">Pizza</option>
+        <option value="burgers">Burgers</option>
+      </select>
+    </div>
+    <div id="foodItemsContainer">
+      <div class="items" id="items-container">
+        <!-- Beverages -->
+        <!-- Beverages -->
+        <div class="item" data-category="beverages">
+          <img src="images/coffee_black.jpg" alt="Black Coffee" />
+          <div class="info">
+            <h3>Black Coffee (No Sugar)</h3>
+            <p>Calories: 2-5 (1 cup, 240 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img
+            src="images/coffee_milk_sugar.jpg"
+            alt="Coffee with Milk and Sugar"
+          />
+          <div class="info">
+            <h3>Coffee (With Milk and Sugar)</h3>
+            <p>Calories: 50-70 (1 cup, 240 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/cappuccino.jpg" alt="Cappuccino" />
+          <div class="info">
+            <h3>Cappuccino</h3>
+            <p>Calories: 100-120 (1 cup, 240 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/latte.jpg" alt="Latte" />
+          <div class="info">
+            <h3>Latte</h3>
+            <p>Calories: 120-150 (1 cup, 240 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/mocha.jpg" alt="Mocha" />
+          <div class="info">
+            <h3>Mocha</h3>
+            <p>Calories: 200-250 (1 cup, 240 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/tea_black.jpg" alt="Black Tea" />
+          <div class="info">
+            <h3>Black Tea (No Sugar)</h3>
+            <p>Calories: 2-5 (1 cup, 240 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/tea_milk_sugar.jpg" alt="Tea with Milk and Sugar" />
+          <div class="info">
+            <h3>Tea (With Milk and Sugar)</h3>
+            <p>Calories: 50-70 (1 cup, 240 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/masala_tea.jpg" alt="Masala Tea" />
+          <div class="info">
+            <h3>Masala Tea (Chai)</h3>
+            <p>Calories: 120-150 (1 cup, 240 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/green_tea.jpg" alt="Green Tea" />
+          <div class="info">
+            <h3>Green Tea</h3>
+            <p>Calories: 0-2 (1 cup, 240 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/cola.jpg" alt="Regular Cola" />
+          <div class="info">
+            <h3>Regular Cola</h3>
+            <p>Calories: 140 (1 can, 330 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/cola_diet.jpg" alt="Diet Cola" />
+          <div class="info">
+            <h3>Diet Cola</h3>
+            <p>Calories: 0-5 (1 can, 330 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/lemon_soda.jpg" alt="Lemon Soda" />
+          <div class="info">
+            <h3>Lemon Soda</h3>
+            <p>Calories: 120-150 (1 glass, 250 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/orange_juice.jpg" alt="Orange Juice" />
+          <div class="info">
+            <h3>Orange Juice (Fresh)</h3>
+            <p>Calories: 110-120 (1 glass, 250 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/apple_juice.jpg" alt="Apple Juice" />
+          <div class="info">
+            <h3>Apple Juice (Fresh)</h3>
+            <p>Calories: 110-130 (1 glass, 250 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/pomegranate_juice.jpg" alt="Pomegranate Juice" />
+          <div class="info">
+            <h3>Pomegranate Juice</h3>
+            <p>Calories: 130-150 (1 glass, 250 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/packaged_juice.jpg" alt="Packaged Juice" />
+          <div class="info">
+            <h3>Packaged Juice (Sugary)</h3>
+            <p>Calories: 150-180 (1 glass, 250 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/chocolate_milkshake.jpg" alt="Chocolate Milkshake" />
+          <div class="info">
+            <h3>Chocolate Milkshake</h3>
+            <p>Calories: 350-400 (1 glass, 300 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img
+            src="images/strawberry_milkshake.jpg"
+            alt="Strawberry Milkshake"
+          />
+          <div class="info">
+            <h3>Strawberry Milkshake</h3>
+            <p>Calories: 300-350 (1 glass, 300 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/banana_milkshake.jpg" alt="Banana Milkshake" />
+          <div class="info">
+            <h3>Banana Milkshake</h3>
+            <p>Calories: 250-300 (1 glass, 300 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/berry_smoothie.jpg" alt="Berry Smoothie" />
+          <div class="info">
+            <h3>Berry Smoothie</h3>
+            <p>Calories: 200-250 (1 glass, 300 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/mango_smoothie.jpg" alt="Mango Smoothie" />
+          <div class="info">
+            <h3>Mango Smoothie</h3>
+            <p>Calories: 250-300 (1 glass, 300 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/beer.jpg" alt="Beer" />
+          <div class="info">
+            <h3>Beer (Regular)</h3>
+            <p>Calories: 150-200 (1 glass, 330 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/wine.jpg" alt="Wine" />
+          <div class="info">
+            <h3>Wine (Red/White)</h3>
+            <p>Calories: 120-130 (1 glass, 150 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/whiskey.jpg" alt="Whiskey" />
+          <div class="info">
+            <h3>Whiskey (Neat)</h3>
+            <p>Calories: 70-80 (1 shot, 30 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/cocktail.jpg" alt="Cocktail" />
+          <div class="info">
+            <h3>Cocktail (Varies)</h3>
+            <p>Calories: 150-300 (1 glass, 200 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/lassi.jpg" alt="Lassi" />
+          <div class="info">
+            <h3>Lassi (Sweet)</h3>
+            <p>Calories: 200-250 (1 glass, 250 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/buttermilk.jpg" alt="Buttermilk" />
+          <div class="info">
+            <h3>Buttermilk (Salted)</h3>
+            <p>Calories: 50-70 (1 glass, 250 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/coconut_water.jpg" alt="Coconut Water" />
+          <div class="info">
+            <h3>Coconut Water</h3>
+            <p>Calories: 45-60 (1 glass, 250 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/jaljeera.jpg" alt="Jaljeera" />
+          <div class="info">
+            <h3>Jaljeera</h3>
+            <p>Calories: 30-50 (1 glass, 250 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/thandai.jpg" alt="Thandai" />
+          <div class="info">
+            <h3>Thandai</h3>
+            <p>Calories: 200-250 (1 glass, 300 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img src="images/hot_chocolate.jpg" alt="Hot Chocolate" />
+          <div class="info">
+            <h3>Hot Chocolate</h3>
+            <p>Calories: 200 (1 glass, 240 ml)</p>
+          </div>
+        </div>
+        <div class="item" data-category="beverages">
+          <img
+            src="images/hot_chocolatewithcream.jpg"
+            alt="Hot Chocolate with wipped cream"
+          />
+          <div class="info">
+            <h3>Hot Chocolate(with wipped cream)</h3>
+            <p>Calories: 250-300 (1 glass, 240 ml)</p>
+          </div>
+        </div>
+
+        <!-- Junk Food -->
+        <div class="item" data-category="junkfood">
+          <img src="images/samosa.jpg" alt="Samosa" />
+          <div class="info">
+            <h3>Samosa</h3>
+            <p>Calories: 262 (1 piece, 100 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/pav_bhaji.jpg" alt="Pav Bhaji" />
+          <div class="info">
+            <h3>Pav Bhaji</h3>
+            <p>Calories: 400 (1 plate, 300 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/vada_pav.jpg" alt="Vada Pav" />
+          <div class="info">
+            <h3>Vada Pav</h3>
+            <p>Calories: 300 (1 piece, 150 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/chole_bhature.jpg" alt="Chole Bhature" />
+          <div class="info">
+            <h3>Chole Bhature</h3>
+            <p>Calories: 450-500 (1 plate, 350 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/pani_puri.jpg" alt="Pani Puri" />
+          <div class="info">
+            <h3>Pani Puri</h3>
+            <p>Calories: 180-200 (6 pieces, 150 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/dahi_puri.jpg" alt="Dahi Puri" />
+          <div class="info">
+            <h3>Dahi Puri</h3>
+            <p>Calories: 250-300 (1 plate, 200 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/aloo_tikki.jpg" alt="Aloo Tikki" />
+          <div class="info">
+            <h3>Aloo Tikki</h3>
+            <p>Calories: 190 (1 piece, 120 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/kachori.jpg" alt="Kachori" />
+          <div class="info">
+            <h3>Kachori</h3>
+            <p>Calories: 220 (1 piece, 100 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/dhokla.jpg" alt="Dhokla" />
+          <div class="info">
+            <h3>Dhokla</h3>
+            <p>Calories: 150 (1 piece, 50 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/idli_sambhar.jpg" alt="Idli Sambhar" />
+          <div class="info">
+            <h3>Idli Sambhar</h3>
+            <p>Calories: 300 (2 idlis + sambhar)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/medu_vada.jpg" alt="Medu Vada" />
+          <div class="info">
+            <h3>Medu Vada</h3>
+            <p>Calories: 97 (1 piece, 50 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/uttapam.jpg" alt="Uttapam" />
+          <div class="info">
+            <h3>Uttapam</h3>
+            <p>Calories: 250-300 (1 piece, 250 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/masala_dosa.jpg" alt="Masala Dosa" />
+          <div class="info">
+            <h3>Masala Dosa</h3>
+            <p>Calories: 350-400 (1 piece, 300 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/paneer_tikka.jpg" alt="Paneer Tikka" />
+          <div class="info">
+            <h3>Paneer Tikka</h3>
+            <p>Calories: 280 (1 plate, 200 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/bhel_puri.jpg" alt="Bhel Puri" />
+          <div class="info">
+            <h3>Bhel Puri</h3>
+            <p>Calories: 220-250 (1 plate, 250 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/sev_puri.jpg" alt="Sev Puri" />
+          <div class="info">
+            <h3>Sev Puri</h3>
+            <p>Calories: 250 (1 plate, 200 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="junkfood">
+          <img src="images/bombay_sandwich.jpg" alt="Bombay Sandwich" />
+          <div class="info">
+            <h3>Bombay Sandwich</h3>
+            <p>Calories: 300-350 (1 piece, 150 g)</p>
+          </div>
+        </div>
+
+        <!-- Dry Fruits -->
+        <div class="item" data-category="dryfruits">
+          <img src="images/almonds.jpg" alt="Almonds" />
+          <div class="info">
+            <h3>Almonds</h3>
+            <p>Calories: 575</p>
+          </div>
+        </div>
+        <div class="item" data-category="dryfruits">
+          <img src="images/cashews.jpg" alt="Cashews" />
+          <div class="info">
+            <h3>Cashews</h3>
+            <p>Calories: 553</p>
+          </div>
+        </div>
+        <div class="item" data-category="dryfruits">
+          <img src="images/walnuts.jpg" alt="Walnuts" />
+          <div class="info">
+            <h3>Walnuts</h3>
+            <p>Calories: 654</p>
+          </div>
+        </div>
+        <div class="item" data-category="dryfruits">
+          <img src="images/pistachios.jpg" alt="Pistachios" />
+          <div class="info">
+            <h3>Pistachios</h3>
+            <p>Calories: 562</p>
+          </div>
+        </div>
+        <div class="item" data-category="dryfruits">
+          <img src="images/raisins.jpg" alt="Raisins" />
+          <div class="info">
+            <h3>Raisins</h3>
+            <p>Calories: 299</p>
+          </div>
+        </div>
+        <div class="item" data-category="dryfruits">
+          <img src="images/dates.jpg" alt="Dates" />
+          <div class="info">
+            <h3>Dates</h3>
+            <p>Calories: 282</p>
+          </div>
+        </div>
+        <div class="item" data-category="dryfruits">
+          <img src="images/hazelnuts.jpg" alt="Hazelnuts" />
+          <div class="info">
+            <h3>Hazelnuts</h3>
+            <p>Calories: 628</p>
+          </div>
+        </div>
+
+        <!-- Vegetables -->
+        <div class="item" data-category="vegetables">
+          <img src="images/spinach.jpg" alt="Spinach" />
+          <div class="info">
+            <h3>Spinach</h3>
+            <p>Calories: 23</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/broccoli.jpg" alt="Broccoli" />
+          <div class="info">
+            <h3>Broccoli</h3>
+            <p>Calories: 34</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/carrot.jpg" alt="Carrot" />
+          <div class="info">
+            <h3>Carrot</h3>
+            <p>Calories: 41</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/tomato.jpg" alt="Tomato" />
+          <div class="info">
+            <h3>Tomato</h3>
+            <p>Calories: 18</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/cucumber.jpg" alt="Cucumber" />
+          <div class="info">
+            <h3>Cucumber</h3>
+            <p>Calories: 15</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/potato.jpg" alt="Potato (Boiled)" />
+          <div class="info">
+            <h3>Potato (Boiled)</h3>
+            <p>Calories: 87</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/sweet_potato.jpg" alt="Sweet Potato" />
+          <div class="info">
+            <h3>Sweet Potato</h3>
+            <p>Calories: 86</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/green_beans.jpg" alt="Green Beans" />
+          <div class="info">
+            <h3>Green Beans</h3>
+            <p>Calories: 31</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/bell_peppers.jpg" alt="Bell Peppers" />
+          <div class="info">
+            <h3>Bell Peppers</h3>
+            <p>Calories: 20</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/zucchini.jpg" alt="Zucchini" />
+          <div class="info">
+            <h3>Zucchini</h3>
+            <p>Calories: 17</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/cauliflower.jpg" alt="Cauliflower" />
+          <div class="info">
+            <h3>Cauliflower</h3>
+            <p>Calories: 25</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/eggplant.jpg" alt="Eggplant" />
+          <div class="info">
+            <h3>Eggplant</h3>
+            <p>Calories: 25</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/cabbage.jpg" alt="Cabbage" />
+          <div class="info">
+            <h3>Cabbage</h3>
+            <p>Calories: 25</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/beetroot.jpg" alt="Beetroot" />
+          <div class="info">
+            <h3>Beetroot</h3>
+            <p>Calories: 43</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/peas.jpg" alt="Peas" />
+          <div class="info">
+            <h3>Peas</h3>
+            <p>Calories: 81</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/onion.jpg" alt="Onion" />
+          <div class="info">
+            <h3>Onion</h3>
+            <p>Calories: 40</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/garlic.jpg" alt="Garlic" />
+          <div class="info">
+            <h3>Garlic</h3>
+            <p>Calories: 149</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/mushrooms.jpg" alt="Mushrooms" />
+          <div class="info">
+            <h3>Mushrooms</h3>
+            <p>Calories: 22</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/kale.jpg" alt="Kale" />
+          <div class="info">
+            <h3>Kale</h3>
+            <p>Calories: 35</p>
+          </div>
+        </div>
+        <div class="item" data-category="vegetables">
+          <img src="images/lettuce.jpg" alt="Lettuce" />
+          <div class="info">
+            <h3>Lettuce</h3>
+            <p>Calories: 15</p>
+          </div>
+        </div>
+
+        <!-- Fruits -->
+        <div class="item" data-category="fruits">
+          <img src="images/apple.jpg" alt="Apple" />
+          <div class="info">
+            <h3>Apple</h3>
+            <p>Calories: 52</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/banana.jpg" alt="Banana" />
+          <div class="info">
+            <h3>Banana</h3>
+            <p>Calories: 89</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/orange.jpg" alt="Orange" />
+          <div class="info">
+            <h3>Orange</h3>
+            <p>Calories: 47</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/mango.jpg" alt="Mango" />
+          <div class="info">
+            <h3>Mango</h3>
+            <p>Calories: 60</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/pineapple.jpg" alt="Pineapple" />
+          <div class="info">
+            <h3>Pineapple</h3>
+            <p>Calories: 50</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/grape.jpg" alt="Grapes" />
+          <div class="info">
+            <h3>Grapes</h3>
+            <p>Calories: 69</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/watermelon.jpg" alt="Watermelon" />
+          <div class="info">
+            <h3>Watermelon</h3>
+            <p>Calories: 30</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/papaya.jpg" alt="Papaya" />
+          <div class="info">
+            <h3>Papaya</h3>
+            <p>Calories: 43</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/guava.jpg" alt="Guava" />
+          <div class="info">
+            <h3>Guava</h3>
+            <p>Calories: 68</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/pear.jpg" alt="Pear" />
+          <div class="info">
+            <h3>Pear</h3>
+            <p>Calories: 57</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/pomegranate.jpg" alt="Pomegranate" />
+          <div class="info">
+            <h3>Pomegranate</h3>
+            <p>Calories: 83</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/strawberries.jpg" alt="Strawberries" />
+          <div class="info">
+            <h3>Strawberries</h3>
+            <p>Calories: 32</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/blueberries.jpg" alt="Blueberries" />
+          <div class="info">
+            <h3>Blueberries</h3>
+            <p>Calories: 57</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/cherries.jpg" alt="Cherries" />
+          <div class="info">
+            <h3>Cherries</h3>
+            <p>Calories: 63</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/kiwi.jpg" alt="Kiwi" />
+          <div class="info">
+            <h3>Kiwi</h3>
+            <p>Calories: 61</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/avocado.jpg" alt="Avocado" />
+          <div class="info">
+            <h3>Avocado</h3>
+            <p>Calories: 160</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/lychee.jpg" alt="Lychee" />
+          <div class="info">
+            <h3>Lychee</h3>
+            <p>Calories: 66</p>
+          </div>
+        </div>
+
+        <div class="item" data-category="fruits">
+          <img src="images/plums.jpg" alt="Plums" />
+          <div class="info">
+            <h3>Plums</h3>
+            <p>Calories: 46</p>
+          </div>
+        </div>
+        <div class="item" data-category="fruits">
+          <img src="images/peach.jpg" alt="Peach" />
+          <div class="info">
+            <h3>Peach</h3>
+            <p>Calories: 39</p>
+          </div>
+        </div>
+
+        <!-- Pizzas -->
+        <div class="item" data-category="pizzas">
+          <img src="images/margherita_slice.jpg" alt="Margherita Pizza Slice" />
+          <div class="info">
+            <h3>Margherita Pizza (Slice)</h3>
+            <p>Calories: 250-300 (1 slice, 150 g)</p>
+          </div>
+        </div>
+
+        <div class="item" data-category="pizzas">
+          <img
+            src="images/veggie_supreme_slice.jpg"
+            alt="Veggie Supreme Pizza Slice"
+          />
+          <div class="info">
+            <h3>Veggie Supreme Pizza (Slice)</h3>
+            <p>Calories: 300-350 (1 slice, 175 g)</p>
+          </div>
+        </div>
+
+        <div class="item" data-category="pizzas">
+          <img
+            src="images/cheese_burst_slice.jpg"
+            alt="Cheese Burst Pizza Slice"
+          />
+          <div class="info">
+            <h3>Cheese Burst Pizza (Slice)</h3>
+            <p>Calories: 400-450 (1 slice, 200 g)</p>
+          </div>
+        </div>
+
+        <div class="item" data-category="pizzas">
+          <img src="images/pepperoni_slice.jpg" alt="Pepperoni Pizza Slice" />
+          <div class="info">
+            <h3>Pepperoni Pizza (Slice)</h3>
+            <p>Calories: 350-400 (1 slice, 175 g)</p>
+          </div>
+        </div>
+
+        <div class="item" data-category="pizzas">
+          <img src="images/hawaiian_slice.jpg" alt="Hawaiian Pizza Slice" />
+          <div class="info">
+            <h3>Hawaiian Pizza (Slice)</h3>
+            <p>Calories: 300-350 (1 slice, 175 g)</p>
+          </div>
+        </div>
+
+        <div class="item" data-category="pizzas">
+          <img
+            src="images/paneer_tikka_slice.jpg"
+            alt="Paneer Tikka Pizza Slice"
+          />
+          <div class="info">
+            <h3>Paneer Tikka Pizza (Slice)</h3>
+            <p>Calories: 300-350 (1 slice, 175 g)</p>
+          </div>
+        </div>
+
+        <div class="item" data-category="pizzas">
+          <img
+            src="images/four_cheese_slice.jpg"
+            alt="Four Cheese Pizza Slice"
+          />
+          <div class="info">
+            <h3>Four Cheese Pizza (Slice)</h3>
+            <p>Calories: 400-450 (1 slice, 200 g)</p>
+          </div>
+        </div>
+
+        <div class="item" data-category="pizzas">
+          <img
+            src="images/thin_crust_slice.jpg"
+            alt="Thin-Crust Veggie Pizza Slice"
+          />
+          <div class="info">
+            <h3>Thin-Crust Veggie Pizza (Slice)</h3>
+            <p>Calories: 200-250 (1 slice, 150 g)</p>
+          </div>
+        </div>
+
+        <div class="item" data-category="pizzas">
+          <img
+            src="images/stuffed_crust_slice.jpg"
+            alt="Stuffed Crust Pizza Slice"
+          />
+          <div class="info">
+            <h3>Stuffed Crust Pizza (Slice)</h3>
+            <p>Calories: 450-500 (1 slice, 200 g)</p>
+          </div>
+        </div>
+
+        <!-- Burgers -->
+        <div class="item" data-category="burgers">
+          <img
+            src="images/classic_veggie_burger.jpg"
+            alt="Classic Veggie Burger"
+          />
+          <div class="info">
+            <h3>Classic Veggie Burger</h3>
+            <p>Calories: 300-350 (1 piece, 250 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="burgers">
+          <img src="images/cheeseburger.jpg" alt="Cheeseburger" />
+          <div class="info">
+            <h3>Cheeseburger</h3>
+            <p>Calories: 350-400 (1 piece, 300 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="burgers">
+          <img src="images/double_cheeseburger.jpg" alt="Double Cheeseburger" />
+          <div class="info">
+            <h3>Double Cheeseburger</h3>
+            <p>Calories: 500-600 (1 piece, 350 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="burgers">
+          <img src="images/paneer_tikka_burger.jpg" alt="Paneer Tikka Burger" />
+          <div class="info">
+            <h3>Paneer Tikka Burger</h3>
+            <p>Calories: 400-450 (1 piece, 300 g)</p>
+          </div>
+        </div>
+        <div class="item" data-category="burgers">
+          <img src="images/spicy_veggie_burger.jpg" alt="Spicy Veggie Burger" />
+          <div class="info">
+            <h3>Spicy Veggie Burger</h3>
+            <p>Calories: 350-400 (1 piece, 300 g)</p>
+          </div>
+        </div>
+
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+    <script>
+      function filterItems() {
+        const category = document.getElementById("category").value;
+        const items = document.querySelectorAll(".item");
+
+        items.forEach((item) => {
+          if (category === "all" || item.dataset.category === category) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+
+      document
+        .getElementById("searchBar")
+        .addEventListener("input", function (e) {
+          const searchQuery = e.target.value.toLowerCase();
+          const foodItems = document.querySelectorAll(
+            "#foodItemsContainer .item"
+          );
+
+          foodItems.forEach((item) => {
+            const itemName = item.querySelector("h3").textContent.toLowerCase();
+            if (itemName.includes(searchQuery)) {
+              item.style.display = ""; // Show the item
+            } else {
+              item.style.display = "none"; // Hide the item
+            }
+          });
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+    </script>
+
+    <!-- <script>
+        function filterTable() {
+          const input = document.getElementById("searchInput");
+          const filter = input.value.toLowerCase();
+          const table = document.getElementById("nutritionTable");
+          const tr = table.getElementsByTagName("tr");
+    
+          for (let i = 1; i < tr.length; i++) {
+            const td = tr[i].getElementsByTagName("td");
+            let show = false;
+            for (let j = 0; j < td.length; j++) {
+              if (td[j] && td[j].innerText.toLowerCase().indexOf(filter) > -1) {
+                show = true;
+                break;
+              }
+            }
+            tr[i].style.display = show ? "" : "none";
+          }
+        }
+      </script> -->
+  </body>
+</html>

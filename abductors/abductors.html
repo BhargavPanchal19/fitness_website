@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total Abs Workout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="abductors.css" />
+    <style>
+      .warmup-card {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .warmup-card:hover {
+        transform: scale(1.02);
+      }
+
+      /* MODAL STYLE */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 99;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background: rgba(0, 0, 0, 0.75);
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 600px;
+        position: relative;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .close {
+        color: #aaa;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+
+      .close:hover {
+        color: #000;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#home1" class="logo">Gym</a>
+
+      <!-- Menu icon -->
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <ul class="navbar" id="nav-menu">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/workout/workout.html">Workouts</a></li>
+        <li><a href="/exercise.html" style="color: #00aaff">Exercises</a></li>
+        <li><a href="/fitness/fitness.html">Fitness</a></li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+      </ul>
+
+      <!-- <div class="top-btn">
+          <a href="#" class="nav-btn">Login</a>
+        </div> -->
+    </header>
+
+    <section>
+      <div class="content">
+        <h1>abductors Workout</h1>
+        <p style="color: #555555">
+          Abductors exercises. Target your abductors with these movements.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <!-- <h2 style="text-align:center; color:#059;">🦵 Adductor (Inner Thigh) Exercises</h2> -->
+        <div class="warmup-grid">
+          <div class="warmup-card">
+            <img src="Side-Lying Leg Raise" alt="Side-Lying Leg Raise" />
+            <h3>Side-Lying Leg Raise</h3>
+            <h5 style="color: #555555">Target: Outer Thighs</h5>
+            <p>
+              Lie on your side, raise your top leg straight up, keeping hips
+              stacked.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="Clamshells" alt="Clamshells" />
+            <h3>Clamshells</h3>
+            <h5 style="color: #555555">Target: Glute Medius</h5>
+            <p>
+              Lie on side, knees bent. Open top knee like a clamshell while feet
+              stay together.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="Fire Hydrant" alt="Fire Hydrant" />
+            <h3>Fire Hydrant</h3>
+            <h5 style="color: #555555">Target: Hips & Glutes</h5>
+            <p>
+              On all fours, lift one knee out sideways, keeping hips square.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="Standing Leg Abduction" alt="Standing Leg Abduction" />
+            <h3>Standing Leg Abduction</h3>
+            <h5 style="color: #555555">Target: Hips & Outer Thighs</h5>
+            <p>
+              Stand tall and lift one leg sideways without leaning your body.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img
+              src="Resistance Band Abduction"
+              alt="Resistance Band Abduction"
+            />
+            <h3>Resistance Band Abduction</h3>
+            <h5 style="color: #555555">Target: Outer Thighs</h5>
+            <p>
+              Use a resistance band just above your knees and step side to side
+              slowly.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="Lateral Band Walk" alt="Lateral Band Walk" />
+            <h3>Lateral Band Walk</h3>
+            <h5 style="color: #555555">Target: Glute Medius</h5>
+            <p>
+              With a band around your thighs, squat slightly and take small
+              steps sideways.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="Curtsy Lunge" alt="Curtsy Lunge" />
+            <h3>Curtsy Lunge</h3>
+            <h5 style="color: #555555">Target: Glutes & Hips</h5>
+            <p>
+              Step one leg behind the other and lower down like a curtsy.
+              Alternate sides.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="exerciseModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="modalClose">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img
+          id="modalImg"
+          src=""
+          alt=""
+          style="width: 100%; max-height: 250px; object-fit: contain"
+        />
+        <p id="modalTarget" style="font-weight: bold; color: #555"></p>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+    <section>
+      <div style="text-align: center; margin: 30px">
+        <button class="back-btn" onclick="goBack()">Go Back</button>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

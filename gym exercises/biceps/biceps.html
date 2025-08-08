@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total Abs Workout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="biceps.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#home1" class="logo">Gym</a>
+
+      <!-- Menu icon -->
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <ul class="navbar" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="/workout/workout.html">Workouts</a></li>
+        <li><a href="/exercise.html" style="color: #00aaff">Exercises</a></li>
+        <li><a href="/fitness/fitness.html">Fitness</a></li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+      </ul>
+
+      <!-- <div class="top-btn">
+          <a href="#" class="nav-btn">Login</a>
+        </div> -->
+    </header>
+
+
+
+
+    <section>
+        <div class="content">
+            <h1>Biceps Workout</h1>
+            <p style="color: #555555;">Biceps exercises. Build sleeve-splitting guns with these exercises.</p>
+        </div>
+    </section>
+
+
+
+
+
+    <div class="container">
+        <div class="highlight">
+          <h2>Biceps</h2>
+          <div class="warmup-grid">
+
+           <div class="warmup-card">
+        <img src="biceps_curl1" alt="Bicep Curl">
+        <h3>Bicep Curl</h3>
+        <h5 style="color: #555555;">Target: Biceps</h5>
+        <p>Stand tall, curl weights up while keeping elbows close to your body. Lower slowly.</p>
+      </div>
+
+      <div class="warmup-card">
+        <img src="hammer_curl1" alt="Hammer Curl">
+        <h3>Hammer Curl</h3>
+        <h5 style="color: #555555;">Target: Biceps & Forearms</h5>
+        <p>Hold dumbbells with palms facing your body. Curl up and lower slowly.</p>
+      </div>
+
+      <div class="warmup-card">
+        <img src="concentration_curls" alt="Concentration Curl">
+        <h3>Concentration Curl</h3>
+        <h5 style="color: #555555;">Target: Biceps Peak</h5>
+        <p>Seated, curl one dumbbell at a time with elbow rested on inner thigh.</p>
+      </div>
+
+      <div class="warmup-card">
+        <img src="ez_bar_curl1" alt="EZ-Bar Curl">
+        <h3>EZ-Bar Curl</h3>
+        <h5 style="color: #555555;">Target: Full Biceps</h5>
+        <p>Use an EZ curl bar, keep elbows fixed and curl with control.</p>
+      </div>
+
+      <div class="warmup-card">
+        <img src="incline_curl" alt="Incline Dumbbell Curl">
+        <h3>Incline Dumbbell Curl</h3>
+        <h5 style="color: #555555;">Target: Long Head of Biceps</h5>
+        <p>Lie back on incline bench, curl dumbbells while keeping arms fully extended at the bottom.</p>
+      </div>
+
+      <div class="warmup-card">
+        <img src="preacher_curl" alt="Preacher Curl">
+        <h3>Preacher Curl</h3>
+        <h5 style="color: #555555;">Target: Isolated Biceps</h5>
+        <p>Using a preacher bench, curl weights with slow and controlled motion.</p>
+      </div>
+    
+          </div>
+        </div>
+    </div>
+
+   
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

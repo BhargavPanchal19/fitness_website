@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total Abs Workout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="forearms.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#home1" class="logo">Gym</a>
+
+      <!-- Menu icon -->
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <ul class="navbar" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="/workout/workout.html">Workouts</a></li>
+        <li><a href="/exercise.html" style="color: #00aaff">Exercises</a></li>
+        <li><a href="/fitness/fitness.html">Fitness</a></li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+      </ul>
+
+      <!-- <div class="top-btn">
+          <a href="#" class="nav-btn">Login</a>
+        </div> -->
+    </header>
+
+
+
+
+    <section>
+        <div class="content">
+            <h1>forearms Workout</h1>
+            <p style="color: #555555;">Forearm exercises. Build "Popeye Forearms" with these exercises.</p>
+        </div>
+    </section>
+
+
+
+
+
+    <section>
+        <div class="container">
+          <!-- <h2 style="text-align:center; color:#059;">🦵 Adductor (Inner Thigh) Exercises</h2> -->
+          <div class="warmup-grid">
+      
+           
+            <div class="warmup-card">
+                <img src="Wrist Curls" alt="Wrist Curls">
+                <h3>Wrist Curls</h3>
+                <h5 style="color: #555555;">Target: Flexor Muscles</h5>
+                <p>Sit holding dumbbells, palms up, curl only your wrists upward and lower.</p>
+              </div>
+
+              <div class="warmup-card">
+                <img src="Farmer’s Carry" alt="Farmer's Carry">
+                <h3>Farmer’s Carry</h3>
+                <h5 style="color: #555555;">Target: Grip Strength</h5>
+                <p>Hold heavy dumbbells and walk for time/distance to build grip and stability.</p>
+              </div>
+              
+              <div class="warmup-card">
+                <img src="Plate Pinches" alt="Plate Pinches">
+                <h3>Plate Pinches</h3>
+                <h5 style="color: #555555;">Target: Pinch Strength</h5>
+                <p>Pinch two weight plates together and hold as long as possible.</p>
+              </div>
+              
+              <div class="warmup-card">
+                <img src="Reverse Wrist Curls" alt="Reverse Curls">
+                <h3>Reverse Curls</h3>
+                <h5 style="color: #555555;">Target: Brachioradialis</h5>
+                <p>Use an overhand grip on the barbell and curl up to shoulder height.</p>
+              </div>
+              
+              <div class="warmup-card">
+                <img src="Wrist Rotations" alt="Wrist Rotations">
+                <h3>Wrist Rotations</h3>
+                <h5 style="color: #555555;">Target: Mobility & Strength</h5>
+                <p>Hold light weights and rotate your wrists inward and outward slowly.</p>
+              </div>
+              
+              <div class="warmup-card">
+                <img src="Wrist Roller" alt="Wrist Roller">
+                <h3>Wrist Roller</h3>
+                <h5 style="color: #555555;">Target: Full Forearm</h5>
+                <p>Use a wrist roller with weight, roll up and down to target all forearm muscles.</p>
+              </div>
+              
+              
+              
+      
+          </div>
+        </div>
+      </section>
+      
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

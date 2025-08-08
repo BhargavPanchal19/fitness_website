@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total Abs Workout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="adductors.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#home1" class="logo">Gym</a>
+
+      <!-- Menu icon -->
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <ul class="navbar" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="/workout/workout.html">Workouts</a></li>
+        <li><a href="/exercise.html" style="color: #00aaff">Exercises</a></li>
+        <li><a href="/fitness/fitness.html">Fitness</a></li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+      </ul>
+
+      <!-- <div class="top-btn">
+          <a href="#" class="nav-btn">Login</a>
+        </div> -->
+    </header>
+
+
+
+
+    <section>
+        <div class="content">
+            <h1>Adductors Workout</h1>
+            <p style="color: #555555;">Adductors exercises. Target your adductors with these movements.</p>
+        </div>
+    </section>
+
+
+
+
+
+    <section>
+        <div class="container">
+          <!-- <h2 style="text-align:center; color:#059;">🦵 Adductor (Inner Thigh) Exercises</h2> -->
+          <div class="warmup-grid">
+      
+            <div class="warmup-card">
+              <img src="sumo_squat" alt="Sumo Squat">
+              <h3>Sumo Squat</h3>
+              <h5 style="color: #555555;">Target: Inner Thighs, Glutes</h5>
+              <p>Stand wide, toes out, squat down while keeping back straight and knees over toes.</p>
+            </div>
+      
+            <div class="warmup-card">
+              <img src="side_lunge" alt="Side Lunge">
+              <h3>Side Lunge</h3>
+              <h5 style="color: #555555;">Target: Adductors, Glutes</h5>
+              <p>Step to the side, bend one knee while keeping the other leg straight, return to center.</p>
+            </div>
+      
+            <div class="warmup-card">
+              <img src="Copenhagen_Plank" alt="Copenhagen Plank">
+              <h3>Copenhagen Plank</h3>
+              <h5 style="color: #555555;">Target: Inner Thighs, Core</h5>
+              <p>Support body on forearm and one inner thigh on a bench. Hold plank position.</p>
+            </div>
+      
+            <div class="warmup-card">
+                <img src="frog_pumps" alt="Frog Pumps">
+                <h3>Frog Pumps</h3>
+                <h5 style="color: #555555;">Target: Inner Thighs & Glutes</h5>
+                <p>Lie on your back, press soles of feet together, knees out, and thrust hips up and down.</p>
+            </div>
+
+            <div class="warmup-card">
+              <img src="Lying Leg Raises" alt="Lying Leg Raise">
+              <h3>Lying Leg Raises</h3>
+              <h5 style="color: #555555;">Target: Adductors</h5>
+              <p>Lie on your side, lift lower leg toward ceiling. Perform slow and controlled reps.</p>
+            </div>
+      
+            <div class="warmup-card">
+              <img src="Banded Adduction" alt="Banded Adduction">
+              <h3>Banded Adduction</h3>
+              <h5 style="color: #555555;">Target: Inner Thighs</h5>
+              <p>Use a resistance band and pull one leg across the midline against tension.</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

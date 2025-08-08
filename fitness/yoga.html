@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoga | Gym</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="fitness.css" />
+    <link rel="stylesheet" href="yoga.css" />
+    <style>
+      .back-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #059;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: background 0.3s ease;
+      }
+
+      .back-btn:hover {
+        background-color: #036;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#home" class="logo">Gym</a>
+
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <ul class="navbar" id="nav-menu">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/workout/workout.html">Workouts</a></li>
+        <li><a href="/exercise.html">Exercises</a></li>
+        <li><a href="/fitness/fitness.html" style="color: #00aaff">Fitness</a></li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+        <!-- <li><a href="#" style="color: #00aaff;">Yoga</a></li> -->
+      </ul>
+    </header>
+
+    <section>
+      <div class="container">
+        <h1>Yoga</h1>
+        <p style="text-align: center">
+          Balance your body, mind, and spirit through Yoga
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <h2><span class="emoji">🧘‍♀️</span> Benefits of Yoga</h2>
+        <ul>
+          <li>Improves flexibility and posture</li>
+          <li>Boosts mental clarity and focus</li>
+          <li>Reduces stress and anxiety</li>
+          <li>Enhances strength and balance</li>
+          <li>Promotes better breathing and mindfulness</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="emoji">📅</span> Daily Yoga Routine</h2>
+        <ul>
+          <li>
+            <strong>Morning (15–30 mins):</strong> Sun Salutations, Breathing
+            exercises
+          </li>
+          <li>
+            <strong>Afternoon (10 mins):</strong> Stretch and meditate during
+            breaks
+          </li>
+          <li>
+            <strong>Evening (20–30 mins):</strong> Relaxing poses, deep
+            breathing, Shavasana
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="emoji">📌</span> Popular Yoga Poses</h2>
+        <ul>
+          <li>Mountain Pose (Tadasana)</li>
+          <li>Downward Dog (Adho Mukha Svanasana)</li>
+          <li>Tree Pose (Vrikshasana)</li>
+          <li>Warrior II (Virabhadrasana II)</li>
+          <li>Child’s Pose (Balasana)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="emoji">💡</span> Tips for Beginners</h2>
+        <ul>
+          <li>Start slow and focus on your breath</li>
+          <li>Use a yoga mat and stay hydrated</li>
+          <li>Don't force any posture — flexibility comes with time</li>
+          <li>Practice regularly, even for 10 minutes a day</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="emoji">🎧</span> Yoga with Music</h2>
+        <ul>
+          <li>Calm instrumental or ambient nature sounds</li>
+          <li>Spotify/YouTube: "Yoga Music", "Zen Playlist"</li>
+          <li>Helps deepen focus and maintain calmness</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin: 30px">
+        <a href="/fitness/fitness.html" class="back-btn">← Back to Fitness</a>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

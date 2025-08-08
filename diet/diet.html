@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diet</title>
+    <link rel="stylesheet" href="diet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#home1" class="logo">Gym</a>
+
+      <!-- Menu icon -->
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <ul class="navbar" id="nav-menu">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/workout/workout.html">Workouts</a></li>
+        <li><a href="/exercise.html">Exercises</a></li>
+        <li><a href="/fitness/fitness.html">Fitness</a></li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="#diet" style="color: #00aaff">Diet</a></li>
+      </ul>
+
+      <!-- <div class="top-btn">
+          <a href="#" class="nav-btn">Login</a>
+        </div> -->
+    </header>
+
+    <section class="diet-plans">
+      <h2>Vegetarian Diet Plans for Gym</h2>
+      <p>Choose a meal plan based on your fitness goal.</p>
+
+      <div class="diet-grid">
+        <!-- Muscle Gain Plan -->
+        <div class="diet-card">
+          <h3>Muscle Gain</h3>
+          <ul>
+            <li>🌿 Breakfast: Paneer & Spinach Paratha</li>
+            <li>🥗 Lunch: Brown Rice, Dal, Mixed Veggies</li>
+            <li>🥜 Snack: Greek Yogurt, Chia Seeds</li>
+            <li>🍛 Dinner: Quinoa, Tofu Curry</li>
+          </ul>
+          <button class="btn view-plan" data-plan="muscle">View Plan</button>
+        </div>
+
+        <!-- Weight Loss Plan -->
+        <div class="diet-card">
+          <h3>Weight Loss</h3>
+          <ul>
+            <li>🍎 Breakfast: Oats, Almonds, Chia Seeds</li>
+            <li>🥗 Lunch: Grilled Tofu Salad, Lentil Soup</li>
+            <li>🥒 Snack: Cucumber, Hummus</li>
+            <li>🍲 Dinner: Stir-fry Veggies, Roti</li>
+          </ul>
+          <button class="btn view-plan" data-plan="weightloss">
+            View Plan
+          </button>
+        </div>
+
+        <!-- Maintenance Plan -->
+        <div class="diet-card">
+          <h3>Maintain Weight</h3>
+          <ul>
+            <li>🥣 Breakfast: Whole Wheat Toast, Peanut Butter</li>
+            <li>🍛 Lunch: Brown Rice, Rajma, Salad</li>
+            <li>🥜 Snack: Mixed Nuts, Yogurt</li>
+            <li>🥦 Dinner: Grilled Paneer, Stir-fried Veggies</li>
+          </ul>
+          <button class="btn view-plan" data-plan="maintain">View Plan</button>
+        </div>
+
+        <div class="diet-card">
+          <h3>Pre-workout</h3>
+          <ul>
+            <li>Bread</li>
+            <li>Peanut-Butter</li>
+            <li>Banana</li>
+          </ul>
+          <!-- <button class="btn view-plan" data-plan="pre_workout">View Plan</button> -->
+        </div>
+
+        <div class="diet-card">
+          <h3>Post Workout</h3>
+          <ul>
+            <li>Oats</li>
+            <li>Dryfruits</li>
+            <li>Milk</li>
+            <li>Peanut-Butter</li>
+            <li>Whey-Protien</li>
+          </ul>
+          <!-- <button class="btn view-plan" data-plan="post_workout">View Plan</button> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- POPUP Modal -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="popup-title"></h2>
+        <table id="popup-table">
+          <tr>
+            <th>Time</th>
+            <th>Meal</th>
+          </tr>
+        </table>
+        <button id="download-plan" class="btn">Download Plan</button>
+      </div>
+    </div>
+
+    <section>
+      <div class="content">
+        <h1>Healthy Recipes</h1>
+        <p>
+          Learn how to prepare meals that taste great and support your fitness
+          goals.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="box-grid">
+        <div class="box" onclick="openPopup('smoothie')">
+          <img src="smoothie.jpg" alt="" width="180px" height="112px" />
+
+          <h3>Smoothies</h3>
+        </div>
+
+        <div class="box" onclick="openPopup('oats')">
+          <img src="oats1.jpg" alt="" width="180px" height="112px" />
+
+          <h3>Oats</h3>
+        </div>
+
+        <div class="box" onclick="openPopup('fruit_salad')">
+          <img src="fruit-salad2.jpg" alt="" width="180px" height="112px" />
+
+          <h3>Fruit Salad</h3>
+        </div>
+
+        <div class="box" onclick="openPopup('sandwich')">
+          <img src="sandwich.jpg" alt="" width="180px" height="112px" />
+
+          <h3>Sandwich</h3>
+        </div>
+
+        <div class="box" onclick="openPopup('pb_bread')">
+          <img
+            src="bread-peanut-butter3.jpg"
+            alt=""
+            width="180px"
+            height="112px"
+          />
+
+          <h3>Peanut Butter Bread</h3>
+        </div>
+
+        <div class="box" onclick="openPopup('chilla')">
+          <img src="chilla.jpg" alt="" width="180px" height="112px" />
+
+          <h3>Chilla</h3>
+        </div>
+
+        <div class="box" onclick="openPopup('soya_chunks')">
+          <img src="soya-chunks.jpg" alt="" width="180px" height="112px" />
+
+          <h3>Soya Chunks</h3>
+        </div>
+
+        <div class="box" onclick="openPopup('sprouts')">
+          <img src="sprouts1.webp" alt="" width="180px" height="112px" />
+
+          <h3>Sprouts salad</h3>
+        </div>
+      </div>
+
+      <div id="popup1" class="popup1">
+        <div class="popup-content1">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2 id="recipe-title" style="color: #000000"></h2>
+          <h3>Ingredients:</h3>
+          <ul id="recipe-ingredients"></ul>
+          <h3>Instructions:</h3>
+          <p id="recipe-instructions"></p>
+          <h3>Nutrition Info:</h3>
+          <table>
+            <tr>
+              <th>Calories</th>
+              <th>Protein</th>
+              <th>Carbs</th>
+              <th>Fats</th>
+            </tr>
+            <tr id="recipe-nutrition"></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-about">
+            <h3>About Us</h3>
+            <p>
+              Your go-to platform for expert workout plans, training guides, and
+              nutrition tips.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#workouts">Workouts</a></li>
+              <li><a href="#fitness">Fitness</a></li>
+              <li><a href="#nutrition">Nutrition</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-social">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@gymtraining.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Gym Training & Exercise | All Rights Reserved</p>
+        </div>
+      </footer>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const mealPlans = {
+          muscle: [
+            { time: "8:00 AM", meal: "Paneer & Spinach Paratha, Nuts" },
+            { time: "12:30 PM", meal: "Brown Rice, Dal, Mixed Veggies" },
+            { time: "4:00 PM", meal: "Greek Yogurt, Chia Seeds" },
+            { time: "8:00 PM", meal: "Quinoa, Tofu Curry, Salad" },
+          ],
+          weightloss: [
+            { time: "8:00 AM", meal: "Oats, Almonds, Chia Seeds" },
+            { time: "12:30 PM", meal: "Grilled Tofu Salad, Lentil Soup" },
+            { time: "4:00 PM", meal: "Cucumber, Hummus" },
+            { time: "8:00 PM", meal: "Stir-fry Veggies, Whole Wheat Roti" },
+          ],
+          maintain: [
+            {
+              time: "8:00 AM",
+              meal: "Whole Wheat Toast, Peanut Butter, Banana",
+            },
+            { time: "12:30 PM", meal: "Brown Rice, Rajma, Salad" },
+            { time: "4:00 PM", meal: "Mixed Nuts, Yogurt" },
+            {
+              time: "8:00 PM",
+              meal: "Grilled Paneer, Quinoa, Stir-fried Veggies",
+            },
+          ],
+          // pre_workout: [
+          //   {
+          //     time: "1",
+          //     meal: "Banana",
+          //   },
+          //   {
+          //     size: "2",
+          //     item: "Brown Bread",
+          //   },
+          //   {
+          //     size: "32g",
+          //     item: "Peanut Butter",
+          //   }
+          // ],
+        };
+
+        const viewButtons = document.querySelectorAll(".view-plan");
+        const popup = document.getElementById("popup");
+        const popupTitle = document.getElementById("popup-title");
+        const popupTable = document.getElementById("popup-table");
+        const closeBtn = document.querySelector(".close-btn");
+        const downloadBtn = document.getElementById("download-plan");
+
+        viewButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const planType = this.getAttribute("data-plan");
+            const meals = mealPlans[planType];
+
+            // popupTitle.innerText = this.previousElementSibling.innerText;  detail for all diet in plan
+            popupTable.innerHTML = "<tr><th>Time</th><th>Meal</th></tr>";
+
+            meals.forEach((meal) => {
+              let row = popupTable.insertRow();
+              row.insertCell(0).innerText = meal.time;
+              row.insertCell(1).innerText = meal.meal;
+            });
+
+            popup.style.display = "flex";
+          });
+        });
+
+        closeBtn.addEventListener("click", () => {
+          popup.style.display = "none";
+        });
+
+        popup.addEventListener("click", (event) => {
+          if (event.target === popup) {
+            popup.style.display = "none";
+          }
+        });
+
+        // Download as PDF
+        downloadBtn.addEventListener("click", () => {
+          let content = popupTitle.innerText + "\n\n";
+          for (let i = 1; i < popupTable.rows.length; i++) {
+            content +=
+              popupTable.rows[i].cells[0].innerText +
+              " - " +
+              popupTable.rows[i].cells[1].innerText +
+              "\n";
+          }
+
+          let blob = new Blob([content], { type: "text/plain" });
+          let a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download =
+            popupTitle.innerText.replace(/\s+/g, "_") + "_DietPlan.txt";
+          a.click();
+        });
+      });
+
+      const recipes = {
+        smoothie: {
+          title: "Smoothie",
+          ingredients: [
+            "1 Banana",
+            "1/2 cup Yogurt",
+            "1/2 cup Milk",
+            "1 tsp Dryfruit",
+            "1 tsp peanut butter",
+            "1 scoop Oats",
+          ],
+          instructions: "Blend all ingredients together until smooth.",
+          nutrition: { calories: 310, protein: 9, carbs: 42, fats: 12 },
+        },
+        oats: {
+          title: "Oats",
+          ingredients: [
+            "1/2 cup Oats",
+            "1 cup Milk",
+            "1 tbsp Honey",
+            "Fruits (optional)",
+          ],
+          instructions: "Cook oats with milk for 5 mins. Add honey and fruits.",
+          nutrition: { calories: 150, protein: 6, carbs: 30, fats: 4 },
+        },
+        fruit_salad: {
+          title: "Fruit Salad",
+          ingredients: [
+            "1 cup Mixed Fruits (Apple, Banana, Orange, Berries)",
+            "1 tbsp Honey",
+            "1 tbsp Lemon Juice",
+            "1/4 tsp Cinnamon",
+          ],
+          instructions:
+            "Chop the fruits into small pieces, mix them in a bowl, add honey, lemon juice, and cinnamon. Stir well and serve chilled.",
+          nutrition: { calories: 120, protein: 2, carbs: 28, fats: 1 },
+        },
+        sandwich: {
+          title: "Sandwich",
+          ingredients: [
+            "2 slices Whole Wheat Bread",
+            "1 tbsp Butter",
+            "1/2 cup Lettuce",
+            "2 slices Tomato",
+            "2 slices Cucumber",
+            "1 slice Cheese",
+          ],
+          instructions:
+            "Spread butter on bread slices, add lettuce, tomato, cucumber, and cheese. Assemble and serve.",
+          nutrition: { calories: 250, protein: 10, carbs: 30, fats: 8 },
+        },
+        pb_bread: {
+          title: "Peanut Butter Bread",
+          ingredients: ["2 slices Whole Wheat Bread", "2 tbsp Peanut Butter"],
+          instructions:
+            "Spread peanut butter evenly on one slice of bread. Top with the other slice. Optionally toast for 1–2 minutes.",
+          nutrition: { calories: 270, protein: 10, carbs: 24, fats: 16 },
+        },
+        chilla: {
+          title: "Chilla",
+          ingredients: [
+            "1 cup Besan (Gram Flour)",
+            "1/4 cup chopped Onions",
+            "1/4 cup chopped Tomatoes",
+            "1 tsp chopped Green Chilies",
+            "Salt to taste",
+            "Water to make batter",
+            "Oil for cooking",
+          ],
+          instructions:
+            "Mix all ingredients (except oil) into a smooth batter. Heat a pan, spread a ladle of batter, and cook on both sides using a little oil until golden brown.",
+          nutrition: { calories: 180, protein: 7, carbs: 22, fats: 7 },
+        },
+        soya_chunks: {
+          title: "Soya Chunks Stir Fry",
+          ingredients: [
+            "1 cup Soya Chunks",
+            "1 small Onion (chopped)",
+            "1 Tomato (chopped)",
+            "1 tsp Ginger-Garlic Paste",
+            "1/2 tsp Turmeric",
+            "1/2 tsp Garam Masala",
+            "Salt to taste",
+            "Oil for cooking",
+          ],
+          instructions:
+            "Boil soya chunks for 5–7 minutes, squeeze water, then sauté in oil with onions, tomatoes, spices, and cook until flavors combine.",
+          nutrition: { calories: 250, protein: 20, carbs: 10, fats: 12 },
+        },
+        sprouts: {
+          title: "Sprouts Salad",
+          ingredients: [
+            "1 cup Mixed Sprouts (moong, chana, etc.)",
+            "1 small Onion (chopped)",
+            "1 Tomato (chopped)",
+            "1 tbsp Lemon Juice",
+            "1/4 tsp Chaat Masala",
+            "Salt to taste",
+            "Coriander leaves",
+          ],
+          instructions:
+            "Mix all ingredients in a bowl. Toss well and serve fresh.",
+          nutrition: { calories: 130, protein: 9, carbs: 18, fats: 2 },
+        },
+      };
+      function openPopup(recipeKey) {
+        const recipe = recipes[recipeKey];
+        document.getElementById("recipe-title").innerText = recipe.title;
+        document.getElementById("recipe-ingredients").innerHTML =
+          recipe.ingredients.map((item) => `<li>${item}</li>`).join("");
+        document.getElementById("recipe-instructions").innerText =
+          recipe.instructions;
+        document.getElementById(
+          "recipe-nutrition"
+        ).innerHTML = `<td>${recipe.nutrition.calories}</td><td>${recipe.nutrition.protein}g</td><td>${recipe.nutrition.carbs}g</td><td>${recipe.nutrition.fats}g</td>`;
+        document.getElementById("popup1").style.display = "flex";
+      }
+
+      function closePopup() {
+        document.getElementById("popup1").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

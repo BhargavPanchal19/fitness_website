@@ -1,0 +1,328 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior:inherit;
+}
+
+/* Style Header */
+header {
+  display: flex;
+  position: sticky;
+  top: 0; /* Ensure it sticks to the top */
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #222;
+  color: white;
+  z-index: 1000; /* Keeps navbar above other elements */
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Desktop Navbar */
+.navbar {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar li a:hover {
+  color: #00aaff;
+  border-bottom: 2px solid #00aaff;
+}
+
+/* Mobile Menu Icon */
+.nav-box-menu {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Section Content */
+.content {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.content h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #059;
+}
+
+.content p {
+  margin-top: 10px;
+  padding: 0 50px;
+}
+
+/* Grid Layout */
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Auto adjust columns */
+  gap: 10px;
+  margin: 30px auto;
+  max-width: 900px; /* Keeps it responsive */
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  color: #059;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.box h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* .contact-us{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #000;
+  color: white;
+  padding: 15px;
+} */
+/* Flex container for Contact Us & Search Bar */
+.contact-container {
+  display: flex;
+  justify-content: space-between;  /* Spreads items evenly */
+  align-items: center;  /* Aligns vertically */
+  flex-wrap: wrap; /* Makes it responsive */
+  gap: 20px; /* Adds spacing between elements */
+  padding: 20px;
+  background:#f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Contact Us Styling */
+.detail {
+  flex: 1; /* Takes available space */
+  text-align: left;
+}
+
+.detail h2 {
+  font-size: 24px;
+  color: #059;
+}
+
+.detail p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Search Bar Container */
+.email-msg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Email Input */
+.email-msg input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #059;
+  border-radius: 5px;
+  outline: none;
+  width: 200px;
+}
+
+/* Submit Button */
+.email-msg button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #059;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.email-msg button:hover {
+  background-color: #047;
+}
+
+
+/* Footer Styling */
+.footer {
+  background: #222;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Footer Content Layout */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  gap: 20px;
+}
+
+/* Footer Sections */
+.footer-container div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #059;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer p, .footer ul {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 8px 0;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #059;
+}
+
+/* Social Media Icons */
+
+.footer-social {
+  display: flex;
+  font-size: 20px;
+  flex-direction: column; 
+  color: white;
+  /* margin-right: 10px; */
+  /* transition: 0.3s; */
+}
+
+.footer-social a{
+  font-size: 20px;
+  grid-template-columns: repeat(1fr);
+  flex-direction: column; 
+  color: white;
+  transition: 0.3s;
+}
+.footer-social a:hover {
+  color: #059;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-container div {
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .email-msg {
+    justify-content: center;
+  }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav-box-menu {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #333;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+  }
+
+  .navbar li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+  }
+
+  .navbar li a {
+    display: block;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  /* Grid for smaller screens */
+  .box-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .box-grid {
+    grid-template-columns: repeat(2, 1fr); /* Single column on very small screens */
+  }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total Abs Workout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="chest.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#home1" class="logo">Gym</a>
+
+      <!-- Menu icon -->
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <ul class="navbar" id="nav-menu">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/workout/workout.html">Workouts</a></li>
+        <li><a href="/exercise.html" style="color: #00aaff">Exercises</a></li>
+        <li><a href="/fitness/fitness.html">Fitness</a></li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+      </ul>
+
+      <!-- <div class="top-btn">
+          <a href="#" class="nav-btn">Login</a>
+        </div> -->
+    </header>
+
+
+
+
+    <section>
+        <div class="content">
+            <h1>Chest Workout</h1>
+            <p style="color: #555555;">Chest exercises. Learn how to build a big, strong and muscular chest.</p>
+        </div>
+    </section>
+
+
+
+
+
+    <section>
+      <div class="container">
+        <!-- <h2 style="text-align:center; color:#059;">🏋️‍♂️ Chest Exercises</h2> -->
+        <div class="warmup-grid">
+          
+          <div class="warmup-card">
+            <img src="push_up" alt="Push-Up">
+            <h3>Push-Up</h3>
+            <h5 style="color: #555555;">Target: Chest, Triceps, Core</h5>
+            <p>Lower your chest to the ground, keep body straight, push back up. Control every rep.</p>
+          </div>
+    
+          <div class="warmup-card">
+            <img src="bench_press1" alt="Bench Press">
+            <h3>Bench Press</h3>
+            <h5 style="color: #555555;">Target: Chest, Shoulders</h5>
+            <p>Lie on a bench, lower bar to chest, press up with controlled motion.</p>
+          </div>
+    
+          <div class="warmup-card">
+            <img src="incline_press" alt="Incline Press">
+            <h3>Incline Press</h3>
+            <h5 style="color: #555555;">Target: Upper Chest</h5>
+            <p>Set bench to 30–45°. Press bar or dumbbells up and down in control.</p>
+          </div>
+    
+          <div class="warmup-card">
+            <img src="chest_fly" alt="Chest Fly">
+            <h3>Chest Fly</h3>
+            <h5 style="color: #555555;">Target: Inner Chest</h5>
+            <p>Open arms wide with dumbbells, keep slight bend, bring them together at the top.</p>
+          </div>
+    
+          <div class="warmup-card">
+            <img src="cable_crossover" alt="Cable Crossover">
+            <h3>Cable Crossover</h3>
+            <h5 style="color: #555555;">Target: Inner Chest</h5>
+            <p>Pull both cables inward in an arc. Squeeze chest in the center, return with control.</p>
+          </div>
+    
+          <div class="warmup-card">
+            <img src="chest_dips" alt="Chest Dips">
+            <h3>Chest Dips</h3>
+            <h5 style="color: #555555;">Target: Lower Chest</h5>
+            <p>Lean forward, bend elbows, dip down and push back up using chest power.</p>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    <section>
+      <div style="text-align: center; margin: 30px">
+        <button class="back-btn" onclick="goBack()">Go Back</button>
+      </div>
+    </section>
+   
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

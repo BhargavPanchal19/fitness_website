@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total Abs Workout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="lats.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#home1" class="logo">Gym</a>
+
+      <!-- Menu icon -->
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <ul class="navbar" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="/workout/workout.html">Workouts</a></li>
+        <li><a href="/exercise.html" style="color: #00aaff">Exercises</a></li>
+        <li><a href="/fitness/fitness.html">Fitness</a></li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+      </ul>
+
+      <!-- <div class="top-btn">
+          <a href="#" class="nav-btn">Login</a>
+        </div> -->
+    </header>
+
+    <section>
+      <div class="content">
+        <h1>lats Workout</h1>
+        <p style="color: #555555">
+          Lats exercises. Develop back width with these movements.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="warmup-grid">
+          <div class="warmup-card">
+            <img src="Pull-Ups" alt="Pull-Ups" />
+            <h3>Pull-Ups</h3>
+            <h5 style="color: #555555">Target: Upper Lats</h5>
+            <p>
+              Hang from a bar and pull your body up until your chin passes the
+              bar, then lower down slowly.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="Lat Pulldown" alt="Lat Pulldown" />
+            <h3>Lat Pulldown</h3>
+            <h5 style="color: #555555">Target: Lats</h5>
+            <p>
+              Sit at a lat pulldown machine and pull the bar down toward your
+              chest with a wide grip.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="Seated Cable Row" alt="Seated Cable Row" />
+            <h3>Seated Cable Row</h3>
+            <h5 style="color: #555555">Target: Mid & Lower Lats</h5>
+            <p>
+              Sit upright and pull the handle toward your torso, squeezing
+              shoulder blades together.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="One-Arm Dumbbell Row" alt="One-Arm Dumbbell Row" />
+            <h3>One-Arm Dumbbell Row</h3>
+            <h5 style="color: #555555">Target: Lats & Rear Delts</h5>
+            <p>
+              Place one knee on a bench, row the dumbbell up toward your hip
+              while keeping your back flat.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="Straight-Arm Pulldown" alt="Straight Arm Pulldown" />
+            <h3>Straight-Arm Pulldown</h3>
+            <h5 style="color: #555555">Target: Lower Lats</h5>
+            <p>
+              Use a cable machine and pull the bar downward with straight arms
+              to your thighs, then return slowly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

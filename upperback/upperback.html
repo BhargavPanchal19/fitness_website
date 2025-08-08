@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total Abs Workout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="upperback.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#home1" class="logo">Gym</a>
+
+      <!-- Menu icon -->
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <ul class="navbar" id="nav-menu">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/workout/workout.html">Workouts</a></li>
+        <li><a href="/exercise.html" style="color: #00aaff">Exercises</a></li>
+        <li><a href="/fitness/fitness.html">Fitness</a></li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+      </ul>
+
+      <!-- <div class="top-btn">
+          <a href="#" class="nav-btn">Login</a>
+        </div> -->
+    </header>
+
+    <section>
+      <div class="content">
+        <h1>upperback Workout</h1>
+        <p style="color: #555555">
+          Upper bank exercises. Essential exercises for a thick upper back.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="warmup-grid">
+          <div class="warmup-card">
+            <img src="Bent Over Rows" alt="Bent Over Rows" />
+            <h3>Bent Over Rows</h3>
+            <h5 style="color: #555555">Target: Lats & Rhomboids</h5>
+            <p>
+              Hinge at your hips, pull the weights toward your waist, squeezing
+              shoulder blades together.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="Face Pulls" alt="Face Pulls" />
+            <h3>Face Pulls</h3>
+            <h5 style="color: #555555">Target: Rear Delts & Traps</h5>
+            <p>
+              Using a rope cable, pull towards your face, elbows high, keeping
+              tension in the upper back.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="Reverse Flys" alt="Reverse Flys" />
+            <h3>Reverse Flys</h3>
+            <h5 style="color: #555555">Target: Rear Delts & Rhomboids</h5>
+            <p>
+              Bend forward and raise dumbbells to the side, squeezing shoulder
+              blades together.
+            </p>
+          </div>
+
+          <div class="warmup-card">
+            <img src="Pull Ups" alt="Pull Ups" />
+            <h3>Pull Ups</h3>
+            <h5 style="color: #555555">Target: Lats & Upper Back</h5>
+            <p>
+              Grip bar shoulder-width and pull up until chin clears the bar,
+              then lower slowly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div style="text-align: center; margin: 30px">
+        <button class="back-btn" onclick="goBack()">Go Back</button>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

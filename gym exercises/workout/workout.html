@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>workouts</title>
+  <link rel="stylesheet" href="workout.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <a href="#home" class="logo">Gym</a>
+
+    <!-- Menu icon -->
+    <div class="nav-box-menu" id="menu-icon">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <ul class="navbar" id="nav-menu">
+      <li><a href="/home.html">Home</a></li>
+      <li><a href="#workout" style="color: #00aaff">Workouts</a></li>
+      <li><a href="/exercise.html">Exercises</a></li>
+      <li><a href="/fitness/fitness.html">Fitness</a></li>
+      <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+      <li><a href="/diet/diet.html">Diet</a></li>
+    </ul>
+
+    <!-- <div class="top-btn">
+        <a href="#" class="nav-btn">Login</a>
+      </div> -->
+
+
+  </header>
+
+  <section>
+    <div class="content">
+      <h1>workout categories</h1>
+      <p>
+        Choose a category that best suits the workout you're searching for. Once in the category, use the sort and
+        filter options to find the right workout for your experience and goals.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="box-grid">
+      <div class="box">
+        <a href="workout_men.html">
+          <img src="workoutsformen.webp" alt="" width="180px" height="112px">
+        </a>
+        <h3>Workouts for men</h3>
+      </div>
+
+      <div class="box">
+        <a href="/workout/workout_women.html">
+          <img src="workoutsforwomen.webp" alt="" width="180px" height="112px">
+        </a>
+        <h3>Workouts for women</h3>
+      </div>
+
+      <div class="box">
+        <a href="/workout/muscle_building.html">
+          <img src="musclebuilding.jpg" alt="" width="180px" height="112px">
+        </a>
+        <h3>Muscle Building</h3>
+      </div>
+
+      <div class="box">
+        <a href="/workout/fat_loss.html">
+          <img src="fatloss.jpg" alt="" width="180px" height="112px">
+        </a>
+        <h3>Fat Loss</h3>
+      </div>
+
+      <div class="box">
+        <a href="/workout/Increase strength.html">
+          <img src="increasestrength.jpg" alt="" width="180px" height="112px">
+        </a>
+        <h3>Increase strength</h3>
+      </div>
+
+      <div class="box">
+        <a href="/abs/abs.html">
+          <img src="abworkouts.jpg" alt="" width="180px" height="112px">
+        </a>
+        <h3>Abs Workouts</h3>
+      </div>
+
+      <div class="box">
+        <a href="/workout/full_body.html">
+          <img src="fullbody.jpg" alt="" width="180px" height="112px">
+        </a>
+        <h3>Full Body</h3>
+      </div>
+
+      <div class="box">
+        <a href="/workout/beginner.html">
+          <img src="beginner_0.webp" alt="" width="180px" height="112px">
+        </a>
+        <h3>Beginners</h3>
+      </div>
+
+      <div class="box">
+        <a href="/workout/at_home.html">
+          <img src="athome.jpg" alt="" width="180px" height="112px">
+        </a>
+        <h3>At Home</h3>
+      </div>
+
+      <div class="box">
+        <a href="/workout/cardio.html">
+          <img src="cardio_0.webp" alt="" width="180px" height="112px">
+        </a>
+        <h3>Cardio</h3>
+      </div>
+
+      <div class="box">
+        <a href="/chest/chest.html">
+          <img src="chestworkouts.jpg" alt="" width="180px" height="112px">
+        </a>
+        <h3>Chest Workouts</h3>
+      </div>
+
+      <div class="box">
+        <button id="backWorkoutBtn" style="all: unset; cursor: pointer;">
+          <img src="backworkouts.jpg" alt="" width="180px" height="112px">
+          <h3>Back Workouts</h3>
+        </button>
+        <div id="backPopup" class="popup-overlay">
+          <div class="popup-content">
+            <h3 style="color: black;">Choose a Back Workout</h3>
+            <ul class="popup-options">
+              <li><a href="/upperback/upperback.html">Upper Back</a></li>
+              <li><a href="/lats/lats.html">Middle Back</a></li>
+              <li><a href="/lowerback/lowerback.html">Lower Back</a></li>
+            </ul>
+            <button class="close-btn" id="closeBackPopup">Close</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="box">
+        <a href="/biceps/biceps.html">
+          <img src="bicepworkouts.jpg" alt="" width="180px" height="112px">
+        </a>
+        <h3>Biceps Workouts</h3>
+      </div>
+
+      <div class="box">
+        <a href="/shoulder/shoulder.html">
+          <img src="shoulderworkout.webp" alt="" width="180px" height="112px">
+        </a>
+        <h3>Shoulder Workouts</h3>
+      </div>
+
+
+      <div class="box">
+        <button id="legWorkoutBtn" style="all: unset; cursor: pointer;">
+          <img src="legworkouts.webp" alt="" width="180px" height="112px">
+          <h3>Leg Workouts</h3>
+        </button>
+        <div id="legPopup" class="popup-overlay">
+          <div class="popup-content">
+            <h3 style="color: black;">Choose a Leg Workout</h3>
+            <ul class="popup-options">
+              <li><a href="/quads/quads.html">Quads</a></li>
+              <li><a href="/hamstrings/hamstrings.html">Hamstrings</a></li>
+              <li><a href="/calves/calves.html">Calves</a></li>
+              <li><a href="/adductors/adductors.html">Adductors</a></li>
+              <li><a href="/glutes/glutes.html">Glutes</a></li>
+            </ul>
+            <button class="close-btn" id="closeLegPopup">Close</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="box">
+        <a href="/triceps/triceps.html">
+          <img src="tricepworkouts.jpg" alt="" width="180px" height="112px">
+        </a>
+        <h3>Triceps Workouts</h3>
+      </div>
+
+
+
+  </section>
+
+  <footer>
+
+    <div class="contact-container">
+      <div class="detail">
+        <h2>Workouts & Advise</h2>
+        <p>We send you the latest workouts, videos, expert guides, and deals.</p>
+      </div>
+
+      <div class="email-msg">
+        <input type="email" placeholder="Email Address">
+        <button>Submit</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>About Us</h3>
+          <p>Your go-to platform for expert workout plans, training guides, and nutrition tips.</p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#workouts">Workouts</a></li>
+            <li><a href="#fitness">Fitness</a></li>
+            <li><a href="#nutrition">Nutrition</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: support@gymtraining.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Gym Training & Exercise | All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </footer>
+
+
+  <script>
+
+
+    const popups = {
+      leg: {
+        btn: document.getElementById("legWorkoutBtn"),
+        popup: document.getElementById("legPopup"),
+        close: document.getElementById("closeLegPopup"),
+      },
+      back: {
+        btn: document.getElementById("backWorkoutBtn"),
+        popup: document.getElementById("backPopup"),
+        close: document.getElementById("closeBackPopup"),
+      }
+    };
+    Object.values(popups).forEach(({ btn, popup, close }) => {
+      btn.addEventListener("click", () => {
+        popup.style.display = "flex";
+      });
+
+      close.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === popup) {
+          popup.style.display = "none";
+        }
+      });
+    });
+
+
+    // const legBtn = document.getElementById("legWorkoutBtn",);
+    // const legPopup = document.getElementById("legPopup");
+    // const closeLegPopup = document.getElementById("closeLegPopup");
+
+
+
+    // legBtn.addEventListener("click", () => {
+    //   legPopup.style.display = "flex";
+    // });
+
+    // closeLegPopup.addEventListener("click", () => {
+    //   legPopup.style.display = "none";
+    // });
+
+    // window.addEventListener("click", (e) => {
+    //   if (e.target === legPopup) {
+    //     legPopup.style.display = "none";
+    //   }
+    // });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuIcon = document.getElementById("menu-icon");
+      const navMenu = document.getElementById("nav-menu");
+
+      menuIcon.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (event) {
+        if (
+          !menuIcon.contains(event.target) &&
+          !navMenu.contains(event.target)
+        ) {
+          navMenu.classList.remove("show");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

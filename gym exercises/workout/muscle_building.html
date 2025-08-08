@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muscle Building Workout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        display: flex;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background: #222;
+        color: white;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 22px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      .navbar {
+        display: flex;
+        list-style: none;
+      }
+
+      .navbar li {
+        margin: 0 15px;
+      }
+
+      .navbar li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .navbar li a:hover {
+        color: #00aaff;
+        border-bottom: 2px solid #00aaff;
+      }
+
+      .nav-box-menu {
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 30px auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .container h1 {
+        font-size: 40px;
+        color: #059;
+        margin-bottom: 10px;
+      }
+
+      .container p {
+        font-size: 18px;
+        color: #444;
+      }
+
+      .section {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 25px 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .section h2 {
+        font-size: 24px;
+        color: #059;
+        margin-bottom: 15px;
+      }
+
+      .section ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .section ul li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .back-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #059;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: background 0.3s ease;
+      }
+
+      .back-btn:hover {
+        background-color: #036;
+      }
+
+      @media (max-width: 768px) {
+        .nav-box-menu {
+          display: block;
+        }
+
+        .navbar {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background: #333;
+          text-align: center;
+          transition: 0.3s ease-in-out;
+        }
+
+        .navbar li {
+          padding: 10px;
+          border-bottom: 1px solid #444;
+        }
+
+        .navbar li a {
+          display: block;
+        }
+
+        .navbar.show {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="#home" class="logo">Gym</a>
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <ul class="navbar" id="nav-menu">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/workout/workout.html" style="color: #00aaff">Workouts</a></li>
+        <li><a href="/exercise.html">Exercises</a></li>
+        <li><a href="/fitness/fitness.html">Fitness</a></li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+      </ul>
+    </header>
+
+    <section class="container">
+      <h1>Muscle Building Workout</h1>
+      <p style="text-align: center">
+        Gain size and strength with proven hypertrophy training plans.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Upper Body Mass</h2>
+      <ul>
+        <li>Barbell bench press, Incline dumbbell press</li>
+        <li>Pull-ups, Lat pulldown, Bent-over rows</li>
+        <li>Military press, Dumbbell lateral raises</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Leg Day Growth</h2>
+      <ul>
+        <li>Barbell back squats, Leg press, Walking lunges</li>
+        <li>Romanian deadlifts, Calf raises, Glute bridges</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Arm & Core Training</h2>
+      <ul>
+        <li>EZ bar curls, Hammer curls, Tricep dips</li>
+        <li>Russian twists, Hanging leg raises, Weighted planks</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Muscle Building Tips</h2>
+      <ul>
+        <li>Train each muscle group twice a week</li>
+        <li>Focus on progressive overload (more reps/weight weekly)</li>
+        <li>Rest 60–90 seconds between sets for muscle recovery</li>
+        <li>Sleep 7–8 hours to maximize muscle repair</li>
+        <li>Eat in a slight calorie surplus with high protein intake</li>
+      </ul>
+    </section>
+
+    <div style="text-align: center; margin: 30px">
+      <a href="/workout/workout.html" class="back-btn">← Back to workout</a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workouts | Gym</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="fitness.css" />
+    <style>
+      .action-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 24px;
+        background-color: #059;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+      .action-btn:hover {
+        background-color: #036;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#home" class="logo">Gym</a>
+
+      <div class="nav-box-menu" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <ul class="navbar" id="nav-menu">
+        <li><a href="/home.html">Home</a></li>
+        <li>
+          <a href="/workout/workout.html">Workouts</a>
+        </li>
+        <li><a href="/exercise.html">Exercises</a></li>
+        <li>
+          <a href="/fitness/fitness.html" style="color: #00aaff">Fitness</a>
+        </li>
+        <li><a href="/nutrition/nutrition.html">Nutrition</a></li>
+        <li><a href="/diet/diet.html">Diet</a></li>
+      </ul>
+    </header>
+
+    <section>
+      <div class="container">
+        <h1>Workouts</h1>
+        <p style="text-align: center">
+          Choose your workout based on your goal and fitness level
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div style="text-align: center">
+        <a href="/workout/workout.html" class="action-btn"
+          >Start Your Workout</a
+        >
+      </div>
+      <div class="section">
+        <h2><span class="emoji">🏋️‍♀️</span> Strength Training</h2>
+        <ul>
+          <li>Full-body compound workouts (squats, deadlifts, presses)</li>
+          <li>Upper-body (push-ups, pull-ups, dumbbell curls)</li>
+          <li>Lower-body (lunges, leg press, glute bridges)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="emoji">🏃</span> Cardio Workouts</h2>
+        <ul>
+          <li>HIIT (High Intensity Interval Training)</li>
+          <li>Endurance running, cycling, jump rope</li>
+          <li>Treadmill sprints or brisk walking</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="emoji">🧘</span> Flexibility & Mobility</h2>
+        <ul>
+          <li>Dynamic stretching</li>
+          <li>Yoga flows for recovery</li>
+          <li>Foam rolling & joint mobility drills</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="emoji">🔥</span> Core & Abs</h2>
+        <ul>
+          <li>Planks and side planks</li>
+          <li>Leg raises and crunch variations</li>
+          <li>Mountain climbers and Russian twists</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin: 30px">
+        <a href="/fitness/fitness.html" class="action-btn">← Back to Fitness</a>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !menuIcon.contains(event.target) &&
+            !navMenu.contains(event.target)
+          ) {
+            navMenu.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
