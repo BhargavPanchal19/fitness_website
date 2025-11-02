@@ -1,0 +1,10 @@
+[build]
+  # No build command needed for static HTML site
+  publish = "."
+  
+[[redirects]]
+  # Redirect root to home.html so users land on home page
+  from = "/"
+  to = "/home.html"
+  status = 200
+
